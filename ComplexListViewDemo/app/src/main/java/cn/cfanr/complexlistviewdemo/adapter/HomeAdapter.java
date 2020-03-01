@@ -1,6 +1,7 @@
 package cn.cfanr.complexlistviewdemo.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,7 @@ public class HomeAdapter extends BaseAdapter{
         MealShowHolder mealShowHolder;
         TalentShowHolder talentShowHolder;
         int type=homeItem.getItemType().getValue();
+        Log.e("getView", "position: "+position+" type: "+type +"convertView :" +convertView);
         switch(type){
             case SIGN_MALL:
                 if(convertView==null){
